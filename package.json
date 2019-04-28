@@ -1,0 +1,62 @@
+{
+  "name": "config-reducer",
+  "description": "One config file for development, test and production",
+  "version": "2.0.3",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "jest --runInBand --config jest.config.js",
+    "test:watch": "yarn test -- --watch",
+    "release": "standard-version",
+    "alpha": "yarn release -- --prerelease alpha",
+    "patch": "yarn release -- --release-as patch",
+    "minor": "yarn release -- --release-as minor",
+    "major": "yarn release -- --release-as major"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "engines": {
+    "node": ">=8.11"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
+    "@commitlint/format": "^7.5.0",
+    "babel-jest": "^23.6.0",
+    "husky": "^2.1.0",
+    "jest": "^23.6.0",
+    "standard-version": "^5.0.2"
+  },
+  "peerDependencies": {},
+  "keywords": [
+    "config",
+    "configuration",
+    "reducer",
+    "simply",
+    "simplify",
+    "plain",
+    "common",
+    "config-reducer",
+    "webpack",
+    "babel"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/krystian_m/config-reducer"
+  },
+  "homepage": "https://github.com/monopix/config-reducer",
+  "bugs": {
+    "url": "https://github.com/monopix/config-reducer/issues"
+  },
+  "license": "MIT",
+  "private": false,
+  "author": "Krystian Mazur"
+}
